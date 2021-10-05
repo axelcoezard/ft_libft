@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoezard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 12:17:38 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/05 12:40:08 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/05 12:17:29 by acoezard          #+#    #+#             */
+/*   Updated: 2021/10/05 12:40:06 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <unistd.h>
-# include <stdlib.h>
+void	ft_putchar_fd(char c, int fd)
+{
+  write(fd, &c, 1);  
+}
 
-void 	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(char *s, int fd);
 
-#endif
