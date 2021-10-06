@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 17:19:08 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/06 17:24:07 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ int		ft_isspace(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
+char	*ft_itoa(int n);
 int		ft_atoi(const char *pnbr);
+char	**ft_split(const char *s, char c);
 
 size_t	ft_strlen(const char *s);
 char	*ft_strchr(const char *s, int c);
