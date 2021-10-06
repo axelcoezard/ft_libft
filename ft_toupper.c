@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:27:11 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 16:28:01 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/06 17:20:16 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 int	ft_toupper(int c)
 {
 	if (ft_islower(c))
+	{
 		return (c - 32);
+	}
 	return (c);
 }
