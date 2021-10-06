@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 16:29:31 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 16:35:17 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/06 16:24:39 by acoezard          #+#    #+#             */
+/*   Updated: 2021/10/06 16:25:12 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_isupper(int c)
 {
-	size_t	len;
-
-	len = 0;
-	while (*s != '\0')
-	{
-		s++;
-		len++;
-	}
-	return (len);
+	return (c >= 'A' && c <= 'Z');
 }

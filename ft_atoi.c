@@ -6,7 +6,7 @@
 /*   By: acoezard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:28:27 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 12:30:54 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/06 16:21:22 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ int	ft_atoi(const char *nptr)
 	int	sign;
 	int	nbr;
 
-	while (*nptr == ' ' || *nptr == '\t' || *nptr == '\v'
-		|| *nptr == '\n' || *nptr == '\f' || *nptr == '\r')
+	while (ft_isspace(*nptr))
 		nptr++;
 	sign = 1;
 	if (*nptr == '+' || *nptr == '-')
@@ -28,7 +27,7 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	nbr = 0;
-	while (*nptr >= '0' && *nptr <= '9')
+	while (ft_isdigit(*nptr))
 	{
 		nbr *= 10;
 		nbr += *nptr - '0';

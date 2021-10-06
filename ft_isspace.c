@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 16:29:31 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 16:35:17 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/06 16:19:50 by acoezard          #+#    #+#             */
+/*   Updated: 2021/10/06 16:20:57 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_isspace(int c)
 {
-	size_t	len;
-
-	len = 0;
-	while (*s != '\0')
-	{
-		s++;
-		len++;
-	}
-	return (len);
+	return (c == ' ' || c == '\t' || c == '\v'
+		|| c == '\n' || c == '\f' || c == '\r');
 }

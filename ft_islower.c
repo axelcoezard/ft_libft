@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_islower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 16:29:31 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 16:35:17 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/06 16:18:27 by acoezard          #+#    #+#             */
+/*   Updated: 2021/10/06 16:19:24 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_islower(int c)
 {
-	size_t	len;
-
-	len = 0;
-	while (*s != '\0')
-	{
-		s++;
-		len++;
-	}
-	return (len);
+	return (c >= 'a' && c <= 'z');
 }
