@@ -6,18 +6,18 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 17:22:47 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 17:52:01 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/07 11:42:11 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_split_sep(char c, char sep)
+static int	ft_split_sep(char c, char sep)
 {
 	return (c == sep || c == '\0');
 }
 
-int	ft_split_size(const char *s, char c)
+static int	ft_split_size(const char *s, char c)
 {
 	int		size;
 	int		i;
@@ -35,12 +35,12 @@ int	ft_split_size(const char *s, char c)
 	return (size);
 }
 
-char	*ft_split_copy(const char *s, int start, int size)
+static char	*ft_split_copy(const char *s, int start, int size)
 {
 	char	*word;
 	int		i;
 
-	word = malloc(sizeof(char) * (size + 1));
+	word = (char *) malloc(sizeof(char) * (size + 1));
 	i = 0;
 	while (i < size)
 	{
@@ -72,8 +72,7 @@ char	**ft_split(const char *s, char c)
 			j = 0;
 			while (!ft_split_sep(s[i + j], c))
 				j++;
-			words[k] = ft_split_copy(s, i, j);
-			k++;
+			words[k++] = ft_split_copy(s, i, j);
 			i += j;
 		}
 	}
