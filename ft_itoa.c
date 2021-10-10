@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:42:55 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/07 11:45:23 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/10 18:17:09 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_itoa(int n)
 	int		sign;
 
 	size = ft_itoa_size(n);
-	s = (char *) malloc(sizeof(char) * (size + 1));
+	s = (char *) ft_calloc(size + 1, 1);
 	if (!s)
 		return (NULL);
 	nbr = n;
