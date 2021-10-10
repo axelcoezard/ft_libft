@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/07 15:08:01 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/10 17:38:20 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,21 @@ int		ft_atoi(const char *pnbr);
 char	**ft_split(const char *s, char c);
 
 size_t	ft_strlen(const char *s);
+
 char	*ft_strcpy(char *dest, const char *src);
 char	*ft_strncpy(char *dest, const char *src, size_t n);
-size_t	ft_strlcpy(char *dest, const char *src, size_t n);
+size_t	ft_strlcpy(char *dest, const char *src, size_t size);
+
+char	*ft_strcat(char *dest, const char *src);
+char	*ft_strncat(char *dest, const char *src, size_t n);
+size_t	*ft_strlcat(char *dest, const char *src, size_t size);
+
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
 char	*ft_strdup(const char *s);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
