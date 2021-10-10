@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/10 17:38:20 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/10 17:45:43 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s1, const char *set);
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
