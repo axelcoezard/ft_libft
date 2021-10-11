@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 13:51:39 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 14:07:06 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/11 14:12:47 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	src_size;
 	size_t	res;
 
+	if (!dest || !src)
+		return (0);
 	dest_size = ft_strlen(dest);
 	src_size = ft_strlen(src);
 	if (size <= dest_size)
