@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:32:28 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/10 18:08:36 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/10 21:46:35 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	sptr = (char *) malloc(sizeof(char) * (s1_len + s2_len + 1));
+	sptr = (char *) ft_calloc(s1_len + s2_len + 1, 1);
 	if (!sptr)
 		return (NULL);
 	ft_strcpy(sptr, s1);
