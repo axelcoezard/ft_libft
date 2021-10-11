@@ -6,12 +6,21 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:15:46 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/07 13:56:05 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/11 21:32:11 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * La fonction ft_calloc() alloue la mémoire nécessaire pour
+ * un tableau de nmemb éléments de size octets, et renvoie un pointeur
+ * vers la mémoire allouée qui a été remplie avec des zéros.
+ *
+ * \param	nmemb	Le nombre d'élements du tableau.
+ * \param	size	La taille des élements du tableau.
+ * \return			L'adresse de l'espace mémoire alloué.
+ */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*array;

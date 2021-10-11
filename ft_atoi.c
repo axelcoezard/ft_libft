@@ -6,12 +6,19 @@
 /*   By: acoezard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:28:27 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 16:21:22 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/11 17:17:21 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * La  fonction ft_atoi() convertit le début de la chaîne pointée
+ * par nptr en entier de type int.
+ *
+ * \param	nptr	Une chaine de caractère.
+ * \return			Un entier signé de type int.
+ */
 int	ft_atoi(const char *nptr)
 {
 	int	sign;
