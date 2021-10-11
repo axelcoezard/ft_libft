@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:33:49 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 15:35:47 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/11 16:09:07 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	ft_lstsize(t_list *lst)
 {
 	int		size;
 
-	size = 1;
-	while (lst->next != NULL)
+	size = 0;
+	while (lst != NULL)
 	{
 		lst = lst->next;
 		size++;
