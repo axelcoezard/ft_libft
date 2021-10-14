@@ -6,16 +6,16 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:19:50 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 22:08:47 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:17:00 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * La fonction ft_isspace() vérifie que c
- * est un caractère blanc: espace, saut de page,
- * changement de ligne, retour chariot, tabulation horizontale
+ * La fonction ft_isspace() vérifie que c 
+ * est un caractère blanc: espace, saut de page, 
+ * changement de ligne, retour chariot, tabulation horizontale 
  * et tabulation verticale.
  *
  * \param	c	Un caractère non-signé.

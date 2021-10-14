@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:42:55 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/10 18:17:09 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 14:21:10 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,13 @@ static char	*ft_itoa_fill(char *s, int start, int end, int nbr)
 	return (s);
 }
 
+/**
+ * Alloue et retourne une chaine de caractères représentant 
+ * l’integer reçu en argument.
+ *
+ * \param	n	L'entier signé à convertir
+ * \return		La chaine de caractères représentant l’entier signé.
+ */
 char	*ft_itoa(int n)
 {
 	long	nbr;

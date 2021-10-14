@@ -6,14 +6,14 @@
 /*   By: acoezard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:28:27 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 17:17:21 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:14:49 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * La  fonction ft_atoi() convertit le début de la chaîne pointée
+ * La  fonction ft_atoi() convertit le début de la chaîne pointée 
  * par nptr en entier de type int.
  *
  * \param	nptr	Une chaine de caractère.

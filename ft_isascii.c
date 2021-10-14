@@ -6,14 +6,14 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:59:45 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 22:02:53 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:16:35 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * La fonction ft_isascii() vérifie si c
+ * La fonction ft_isascii() vérifie si c 
  * est un caractère de la table ASCII.
  *
  * \param	c	Un caractère non-signé.

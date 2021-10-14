@@ -6,14 +6,14 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 15:51:59 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 22:00:42 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:16:30 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * La fonction ft_isalpha() vérifie que c
+ * La fonction ft_isalpha() vérifie que c 
  * est un caractère alphabétique.
  *
  * \param	c	Un caractère non-signé.

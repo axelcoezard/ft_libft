@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 17:22:47 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/07 11:42:11 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 14:26:52 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,15 @@ static char	*ft_split_copy(const char *s, int start, int size)
 	return (word);
 }
 
+/**
+ * Alloue et retourne un tableau de chaines de caracteres 
+ * obtenu en séparant ’s’ à l’aide du caractère ’c’, 
+ * utilisé comme délimiteur. Le tableau doit être terminé par NULL.
+ *
+ * \param	s	La chaine de caractères à découper.
+ * \param	c	Le caractère délimitant.
+ * \return		Le tableau des chaines de caractères résultant du découpage.
+ */
 char	**ft_split(const char *s, char c)
 {
 	char	**words;

@@ -6,12 +6,20 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 12:32:28 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/10 21:46:35 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:14:57 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * Alloue et retourne une nouvelle chaine, 
+ * résultat de la concaténation de s1 et s2.
+ *
+ * \param	s1	La chaine de caractères préfixe.
+ * \param	s2	La chaine de caractères suffixe.
+ * \return 		La nouvelle chaine de caractères.
+ */
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	size_t	s1_len;

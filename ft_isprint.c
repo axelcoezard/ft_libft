@@ -6,14 +6,14 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:06:16 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 22:07:21 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/14 15:16:49 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * La fonction ft_isprint() vérifie que c
+ * La fonction ft_isprint() vérifie que c 
  * est un caractère imprimable, y compris l'espace.
  *
  * \param	c	Un caractère non-signé.
