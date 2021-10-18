@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 12:19:31 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/07 12:33:41 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:18:46 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	*s1_bis;
-	char	*s2_bis;
+	unsigned char	*s1_bis;
+	unsigned char	*s2_bis;
 
 	if (n == 0)
 		return (0);
-	s1_bis = (char *) s1;
-	s2_bis = (char *) s2;
+	s1_bis = (unsigned char *) s1;
+	s2_bis = (unsigned char *) s2;
 	while (*s1_bis && *s2_bis && *s1_bis == *s2_bis && n > 1)
 	{
 		s1_bis++;

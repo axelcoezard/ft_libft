@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 17:22:47 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/14 14:26:52 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 12:25:01 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,16 @@
 static int	ft_split_sep(char c, char sep)
 {
 	return (c == sep || c == '\0');
+}
+
+static int	ft_split_search(const char *s, char c)
+{
+	int		j;
+
+	j = 0;
+	while (!ft_split_sep(s[j], c))
+		j++;
+	return (j);
 }
 
 static int	ft_split_size(const char *s, char c)
@@ -40,14 +50,13 @@ static char	*ft_split_copy(const char *s, int start, int size)
 	char	*word;
 	int		i;
 
-	word = (char *) malloc(sizeof(char) * (size + 1));
+	word = (char *) ft_calloc(size + 1, 1);
 	i = 0;
 	while (i < size)
 	{
 		word[i] = s[start + i];
 		i++;
 	}
-	word[size + 1] = 0;
 	return (word);
 }
 
@@ -70,6 +79,8 @@ char	**ft_split(const char *s, char c)
 
 	size = ft_split_size(s, c);
 	words = (char **) malloc(sizeof(char *) * (size + 1));
+	if (!words)
+		return (NULL);
 	i = 0;
 	k = 0;
 	while (s[i] != '\0')
@@ -78,9 +89,7 @@ char	**ft_split(const char *s, char c)
 			i++;
 		else
 		{
-			j = 0;
-			while (!ft_split_sep(s[i + j], c))
-				j++;
+			j = ft_split_search(s + i, c);
 			words[k++] = ft_split_copy(s, i, j);
 			i += j;
 		}

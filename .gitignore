@@ -3,4 +3,7 @@
 *.swp
 *.swo
 *.DS_Store
+
+libftTester/
+
 libft.a

@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 12:57:46 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 13:02:39 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:16:09 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (0);
 	pstr1 = (unsigned char *) s1;
 	pstr2 = (unsigned char *) s2;
-	while (*pstr1 && *pstr2 && *pstr1 == *pstr2 && n > 1)
+	while (*pstr1 == *pstr2 && n > 1)
 	{
 		pstr1++;
 		pstr2++;

@@ -6,11 +6,18 @@
 /*   By: acoezard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 12:28:27 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/14 15:14:49 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 18:04:38 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	ft_atoi_overflow(int sign)
+{
+	if (sign < 0)
+		return (0);
+	return (-1);
+}
 
 /**
  * La  fonction ft_atoi() convertit le début de la chaîne pointée 
@@ -21,8 +28,8 @@
  */
 int	ft_atoi(const char *nptr)
 {
-	int	sign;
-	int	nbr;
+	unsigned long	nbr;
+	int				sign;
 
 	while (ft_isspace(*nptr))
 		nptr++;
@@ -36,6 +43,8 @@ int	ft_atoi(const char *nptr)
 	nbr = 0;
 	while (ft_isdigit(*nptr))
 	{
+		if ((nbr * 10 + (*nptr - '0')) / 10 != nbr)
+			return (ft_atoi_overflow(sign));
 		nbr *= 10;
 		nbr += *nptr - '0';
 		nptr++;

@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:52:25 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/06 17:01:45 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 16:23:20 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 
 	str = (char *) s;
 	i = 0;
-	while (str[i] != c)
+	while (str[i] != (unsigned char) c)
 	{
 		if (str[i] == '\0')
 			return (NULL);

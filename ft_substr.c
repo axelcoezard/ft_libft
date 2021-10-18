@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 14:30:42 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/14 14:41:24 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 16:27:56 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,13 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
+	if (ft_strlen(s) < start)
+		return (ft_strdup(""));
+	if (ft_strlen(s + start) < len)
+		len = ft_strlen(s + start);
 	sptr = (char *) ft_calloc(len + 1, 1);
 	if (!sptr)
 		return (NULL);
-	ft_strlcpy(sptr, s + start, len);
+	ft_strlcpy(sptr, s + start, len + 1);
 	return (sptr);
 }

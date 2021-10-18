@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 14:08:52 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/11 14:35:00 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:13:01 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	res;
 
-	if (!dest || !src)
-		return (0);
 	res = 0;
 	if (size > 0)
 	{

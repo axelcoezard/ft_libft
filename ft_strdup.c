@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 13:39:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/10 17:58:23 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 11:07:02 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ char	*ft_strdup(const char *s)
 
 	dest_len = ft_strlen(s) + 1;
 	dest = (char *) ft_calloc(dest_len, 1);
+	if (!dest)
+		return (NULL);
 	return (ft_strcpy(dest, s));
 }

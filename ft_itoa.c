@@ -6,25 +6,20 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 18:42:55 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/14 14:21:10 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 15:47:34 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_itoa_size(int n)
+static int	ft_itoa_size(long nbr)
 {
-	long	nbr;
 	int		size;
 
-	size = 0;
-	nbr = n;
+	size = 1;
 	if (nbr < 0)
-	{
-		nbr *= -1;
 		size++;
-	}
-	while (nbr > 0)
+	while (nbr / 10 != 0)
 	{
 		nbr /= 10;
 		size++;
@@ -32,15 +27,18 @@ static int	ft_itoa_size(int n)
 	return (size);
 }
 
-static char	*ft_itoa_fill(char *s, int start, int end, int nbr)
+static void	ft_itoa_fill(char *sptr, int *index, long nbr)
 {
-	while (end > start)
+	if (nbr >= 10)
 	{
-		s[end - 1] = (nbr % 10) + '0';
-		nbr /= 10;
-		end--;
-	}	
-	return (s);
+		ft_itoa_fill(sptr, index, nbr / 10);
+		ft_itoa_fill(sptr, index, nbr % 10);
+	}
+	else
+	{
+		sptr[*index] = nbr + '0';
+		(*index)++;
+	}
 }
 
 /**
@@ -52,26 +50,21 @@ static char	*ft_itoa_fill(char *s, int start, int end, int nbr)
  */
 char	*ft_itoa(int n)
 {
+	char	*sptr;
+	int		index;
 	long	nbr;
-	char	*s;
-	int		size;
-	int		sign;
 
-	size = ft_itoa_size(n);
-	s = (char *) ft_calloc(size + 1, 1);
-	if (!s)
-		return (NULL);
 	nbr = n;
-	sign = 0;
-	if (size == 0)
-		s[0] = '0';
+	sptr = (char *) ft_calloc(ft_itoa_size(nbr) + 1, 1);
+	if (!sptr)
+		return (NULL);
+	index = 0;
 	if (nbr < 0)
 	{
-		s[0] = '-';
+		sptr[index++] = '-';
 		nbr *= -1;
-		sign = 1;
 	}
-	s = ft_itoa_fill(s, sign, size, nbr);
-	s[size + 1] = 0;
-	return (s);
+	ft_itoa_fill(sptr, &index, nbr);
+	sptr[index] = 0;
+	return (sptr);
 }
