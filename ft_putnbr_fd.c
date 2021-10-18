@@ -6,7 +6,7 @@
 /*   By: acoezard <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 11:09:12 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/07 11:53:13 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/18 09:28:29 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,10 @@ void	ft_putnbr_fd(int n, int fd)
 
 	nbr = n;
 	if (nbr < 0)
-		ft_putchar_fd('-', fd), nbr *= -1;
+	{
+		ft_putchar_fd('-', fd);
+		nbr *= -1;
+	}
 	if (nbr == 0)
 		ft_putchar_fd(nbr + '0', fd);
 	else
