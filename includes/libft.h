@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:32:51 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/23 22:24:54 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include "ft_list.h"
+# include "ft_math.h"
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
