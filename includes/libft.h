@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 16:39:51 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/23 17:32:51 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,16 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
 # include "ft_list.h"
-
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+void	ft_putunbr_fd(unsigned int nbr, int fd);
+void	ft_putunbr_base_fd(unsigned long nbr, char *base, int fd);
+
+# include "ft_printf.h"
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

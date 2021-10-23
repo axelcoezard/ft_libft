@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/23 17:20:48 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/23 17:35:56 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,17 @@ COMMON_FILES =	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c \
 				ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 				ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
-				ft_toupper.c ft_striteri.c
+				ft_toupper.c ft_striteri.c \
+				ft_putunbr_fd.c ft_putunbr_base_fd.c ft_printf.c
+
+PRINTF_FILES =	ft_printf_char.c \
+				ft_printf_decimal.c \
+				ft_printf_hex.c \
+				ft_printf_integer.c \
+				ft_printf_percent.c \
+				ft_printf_ptr.c \
+				ft_printf_string.c \
+				ft_printf_udecimal.c
 
 LIST_FILES =	ft_list_create.c \
 				ft_list_add_front.c \
@@ -38,9 +48,11 @@ LIST_FILES =	ft_list_create.c \
 				ft_list_map.c
 
 COMMON_SRCS = $(addprefix ${SOURCES}/, ${COMMON_FILES})
+PRINTF_SRCS = $(addprefix ${SOURCES}/ft_printf/, ${PRINTF_FILES})
 LIST_SRCS = $(addprefix ${SOURCES}/ft_list/, ${LIST_FILES})
 
 COMMON_OBJS = $(COMMON_SRCS:.c=.o)
+PRINTF_OBJS = $(PRINTF_SRCS:.c=.o)
 LIST_OBJS = $(LIST_SRCS:.c=.o)
 
 CC = gcc
@@ -50,8 +62,8 @@ CFLAGS = -Wall -Wextra -Werror
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
-${NAME}: ${COMMON_OBJS} ${LIST_OBJS}
-	ar rcs ${NAME} ${COMMON_OBJS} ${LIST_OBJS}
+${NAME}: ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS}
+	ar rcs ${NAME} ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS}
 
 all: ${NAME}
 
