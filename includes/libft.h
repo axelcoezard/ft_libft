@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 22:24:54 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/24 16:09:59 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include "ft_list.h"
-# include "ft_math.h"
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/stat.h>
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
@@ -25,7 +26,9 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putunbr_fd(unsigned int nbr, int fd);
 void	ft_putunbr_base_fd(unsigned long nbr, char *base, int fd);
 
+# include "ft_list.h"
 # include "ft_printf.h"
+# include "ft_math.h"
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -71,5 +74,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+char	*ft_get_next_line(int fd);
 
 #endif

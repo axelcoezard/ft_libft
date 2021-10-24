@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 17:39:57 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 22:55:13 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/24 16:00:31 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,17 @@ double	ft_max(double x, double y);
 double	ft_abs(double x);
 
 double	ft_sqrt(double x);
-double	ft_rsqrt(double x);
 
-double	ft_pow(double x, double y);
-double	ft_exp(double x);
-double	ft_log(double x);
+double	ft_pow(double x, double power);
+double	ft_exp(double power);
+double	ft_log(double exp);
 
 double	ft_cos(double x);
 double	ft_sin(double x);
 double	ft_tan(double x);
 
-double	ft_acos(double x);
-double	ft_asin(double x);
-double	ft_atan(double x);
+double	ft_acos(double cos);
+double	ft_asin(double sin);
+double	ft_atan(double tan);
 
 #endif

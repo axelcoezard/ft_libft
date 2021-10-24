@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/23 17:35:56 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/24 16:14:32 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,8 @@ COMMON_FILES =	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
 				ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c \
 				ft_toupper.c ft_striteri.c \
-				ft_putunbr_fd.c ft_putunbr_base_fd.c ft_printf.c
+				ft_putunbr_fd.c ft_putunbr_base_fd.c ft_printf.c \
+				ft_get_next_line.c
 
 PRINTF_FILES =	ft_printf_char.c \
 				ft_printf_decimal.c \
