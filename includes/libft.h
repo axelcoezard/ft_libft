@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/24 16:09:59 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/24 16:32:33 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,10 @@ int		ft_atoi(const char *pnbr);
 char	**ft_split(const char *s, char c);
 
 size_t	ft_strlen(const char *s);
-
 char	*ft_strcpy(char *dest, const char *src);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
-
 char	*ft_strcat(char *dest, const char *src);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
-
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);
