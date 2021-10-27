@@ -6,14 +6,13 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 11:35:31 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/24 16:31:52 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/27 11:38:58 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include "libft.h"
 # include <stdarg.h>
 
 struct s_flags
