@@ -6,17 +6,17 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/27 15:36:52 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/27 16:01:57 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	libft.a
+NAME		:=	libft.a
 
-OBJECTS		=	./bin
-SOURCES		=	./sources
-INCLUDES	=	./includes
+OBJECTS		:=	./bin
+SOURCES		:=	./sources
+INCLUDES	:=	./includes
 
-FILES 		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
+FILES 		:=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_islower.c ft_isupper.c ft_isprint.c ft_isspace.c \
 				ft_tolower.c ft_toupper.c \
 				ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
@@ -54,20 +54,29 @@ FILES 		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_math/ft_pow.c \
 				ft_math/ft_sqrt.c
 
-SRCS		=	$(addprefix ${SOURCES}/, ${FILES})
-OBJS		=	$(addprefix ${OBJECTS}/, $(FILES:.c=.o))
+SRCS		:=	$(addprefix ${SOURCES}/, ${FILES})
+OBJS		:=	$(addprefix ${OBJECTS}/, $(FILES:.c=.o))
 
-CC			=	gcc
-CFLAGS		=	-Wall -Wextra -Werror
+CC			:=	gcc
+CFLAGS		:=	-Wall -Wextra -Werror
+
+BLACK		:=	"\033[1;30m"
+RED			:=	"\033[1;31m"
+GREEN		:=	"\033[1;32m"
+CYAN		:=	"\033[1;35m"
+BLUE		:=	"\033[1;36m"
+WHITE		:=	"\033[1;37m"
+EOC			:=	"\033[0;0m"
 
 ${OBJECTS}/%.o : ${SOURCES}/%.c
+	@echo $(BLUE)"● Compilation de $< dans $@"$(EOC)
 	@mkdir -p $(dir $@)
-	${CC} ${CFLAGS} -c $^ -o $@
+	@${CC} ${CFLAGS} -c $^ -o $@
 
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	@echo "● Compilation de la librairie ${NAME}..."
+	@echo $(GREEN)"● Compilation de la librairie ${NAME}..."$(EOC)
 	@ar rcs ${NAME} ${OBJS}
 
 clean:
