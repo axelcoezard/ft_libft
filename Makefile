@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/27 15:35:49 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/27 15:36:52 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,11 +54,11 @@ FILES 		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_math/ft_pow.c \
 				ft_math/ft_sqrt.c
 
-SRCS = $(addprefix ${SOURCES}/, ${FILES})
-OBJS = $(addprefix ${OBJECTS}/, $(FILES:.c=.o))
+SRCS		=	$(addprefix ${SOURCES}/, ${FILES})
+OBJS		=	$(addprefix ${OBJECTS}/, $(FILES:.c=.o))
 
-CC = gcc
-CFLAGS = -Wall -Wextra -Werror
+CC			=	gcc
+CFLAGS		=	-Wall -Wextra -Werror
 
 ${OBJECTS}/%.o : ${SOURCES}/%.c
 	@mkdir -p $(dir $@)
