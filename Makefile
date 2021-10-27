@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/27 15:34:33 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/27 15:35:07 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ FILES 		=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
 				ft_strtrim.c ft_substr.c ft_striteri.c \
 				ft_get_next_line.c \
-				ft_printf.c
+				ft_printf.c \
 				ft_printf/ft_printf_char.c \
 				ft_printf/ft_printf_decimal.c \
 				ft_printf/ft_printf_hex.c \
