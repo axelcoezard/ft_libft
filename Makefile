@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/27 16:04:51 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/27 16:05:20 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ WHITE		:=	"\033[1;37m"
 EOC			:=	"\033[0;0m"
 
 ${OBJECTS}/%.o : ${SOURCES}/%.c
-	@echo "● Compilation de "$(BLUE)"$<"$(EOC)" dans "$(BLUE)"$@"$(EOC)"
+	@echo "● Compilation de "$(BLUE)"$<"$(EOC)" dans "$(BLUE)"$@"$(EOC)
 	@mkdir -p $(dir $@)
 	@${CC} ${CFLAGS} -c $^ -o $@
 
