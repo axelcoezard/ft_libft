@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/27 16:05:20 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/27 16:26:44 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,7 +76,7 @@ ${OBJECTS}/%.o : ${SOURCES}/%.c
 all: ${NAME}
 
 ${NAME}: ${OBJS}
-	@echo $(GREEN)"● Compilation de la librairie ${NAME}..."$(EOC)
+	@echo $(GREEN)"● Generation de la librairie ${NAME}..."$(EOC)
 	@ar rcs ${NAME} ${OBJS}
 
 clean:

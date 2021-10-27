@@ -6,13 +6,13 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 14:09:10 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:34:38 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/27 16:41:12 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_display_ptr(va_list params, t_flags flags)
+int	ft_printf_ptr(va_list params, t_flags flags)
 {
 	unsigned long	address;
 	void			*ptr;
