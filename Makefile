@@ -6,12 +6,13 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/24 16:35:08 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/27 12:00:24 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
+BINARIES = ./bin
 SOURCES = ./sources
 INCLUDES = ./includes
 
@@ -56,25 +57,25 @@ PRINTF_SRCS = $(addprefix ${SOURCES}/ft_printf/, ${PRINTF_FILES})
 LIST_SRCS = $(addprefix ${SOURCES}/ft_list/, ${LIST_FILES})
 MATH_SRCS = $(addprefix ${SOURCES}/ft_math/, ${MATH_FILES})
 
-COMMON_OBJS = $(COMMON_SRCS:.c=.o)
-PRINTF_OBJS = $(PRINTF_SRCS:.c=.o)
-LIST_OBJS = $(LIST_SRCS:.c=.o)
-MATH_OBJS = $(MATH_SRCS:.c=.o)
+COMMON_OBJS = $(addprefix ${BINARIES}/, $(COMMON_FILES:.c=.o))
+PRINTF_OBJS = $(addprefix ${BINARIES}/ft_printf/, $(PRINTF_FILES:.c=.o))
+LIST_OBJS = $(addprefix ${BINARIES}/ft_list/, $(LIST_FILES:.c=.o))
+MATH_OBJS = $(addprefix ${BINARIES}/ft_math/, $(MATH_FILES:.c=.o))
 
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+bin/%.o : sources/%.c
+	mkdir -p $(dir $@)
+	${CC} ${CFLAGS} -c $^ -o $@
+
 
 ${NAME}: ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS} ${MATH_OBJS}
 	ar rcs ${NAME} ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS} ${MATH_OBJS}
 
-all: ${NAME}
-
 clean:
-	rm -f ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS} ${MATH_OBJS}
+	rm -rf ${BINARIES}
 
 fclean: clean
 	rm -f ${NAME}
