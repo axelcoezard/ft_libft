@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/27 12:07:09 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/27 15:11:57 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,19 +71,20 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 bin/%.o : sources/%.c
-	mkdir -p $(dir $@)
+	@mkdir -p $(dir $@)
 	${CC} ${CFLAGS} -c $^ -o $@
 
 all: ${NAME}
 
 ${NAME}: ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS} ${MATH_OBJS}
-	ar rcs ${NAME} ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS} ${MATH_OBJS}
+	@echo "Compilation de la librairie ${NAME}..."
+	@ar rcs ${NAME} ${COMMON_OBJS} ${PRINTF_OBJS} ${LIST_OBJS} ${MATH_OBJS}
 
 clean:
-	rm -rf ${BINARIES}
+	@rm -rf ${BINARIES}
 
 fclean: clean
-	rm -f ${NAME}
+	@rm -f ${NAME}
 
 re:	fclean all
 
