@@ -6,13 +6,13 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 15:14:04 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/29 15:33:30 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/29 17:37:06 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-t_vector	*ft_vector_init(int x, int y)
+t_vector	*ft_vector_init(int x, int y, int z)
 {
 	t_vector	*vector;
 
@@ -21,5 +21,6 @@ t_vector	*ft_vector_init(int x, int y)
 		return (NULL);
 	vector->x = x;
 	vector->y = y;
+	vector->z = z;
 	return (vector);
 }

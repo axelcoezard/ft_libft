@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 15:50:29 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/29 15:52:07 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/29 17:40:22 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ t_vector	*ft_vector_mod(t_vector *a, int x)
 		return (NULL);
 	a->x %= x;
 	a->y %= x;
+	a->z %= x;
 	return (a);
 }

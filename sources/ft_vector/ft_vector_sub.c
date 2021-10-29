@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 15:36:16 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/29 15:52:26 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/10/29 17:42:14 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ t_vector	*ft_vector_sub(t_vector *a, t_vector *b)
 		return (NULL);
 	a->x -= b->x;
 	a->y -= b->y;
+	a->z -= b->z;
 	return (a);
 }
