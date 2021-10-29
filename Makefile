@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/10/27 16:49:22 by acoezard         ###   ########.fr        #
+#    Updated: 2021/10/29 15:51:30 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,7 +52,16 @@ FILES 		:=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_math/ft_max.c \
 				ft_math/ft_min.c \
 				ft_math/ft_pow.c \
-				ft_math/ft_sqrt.c
+				ft_math/ft_sqrt.c \
+				ft_vector/ft_vector_init.c \
+				ft_vector/ft_vector_add.c \
+				ft_vector/ft_vector_sub.c \
+				ft_vector/ft_vector_mul.c \
+				ft_vector/ft_vector_div.c \
+				ft_vector/ft_vector_mod.c \
+				ft_vector/ft_vector_dot.c \
+				ft_vector/ft_vector_distance.c \
+				ft_vector/ft_vector_free.c
 
 SRCS		:=	$(addprefix ${SOURCES}/, ${FILES})
 OBJS		:=	$(addprefix ${OBJECTS}/, $(FILES:.c=.o))
