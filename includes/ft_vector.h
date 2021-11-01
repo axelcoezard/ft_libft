@@ -6,11 +6,14 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/29 15:06:55 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/01 11:17:45 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/01 11:24:36 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_VECTOR_H
+# define FT_VECTOR_H
+
+# include "libft.h"
 
 struct s_vector2
 {
@@ -44,3 +47,5 @@ t_vector3	*ft_vector2_div(t_vector3 *a, int x);
 t_vector3	*ft_vector2_mod(t_vector3 *a, int x);
 int			ft_vector2_dot(t_vector3 *a, t_vector3 *b);
 int			ft_vector2_distance(t_vector3 *a, t_vector3 *b);
+
+#endif

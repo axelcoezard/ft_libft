@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:31:13 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 16:52:01 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/01 11:23:25 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_list_add_front(t_list **alst, void *content)
 {
-	t_list *new;
+	t_list	*new;
 
 	if (alst != NULL)
 	{
