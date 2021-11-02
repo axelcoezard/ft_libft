@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:29:31 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:18:37 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/02 10:19:09 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	size_t	len;
 
 	len = 0;
-	while (*s != '\0')
+	while (s && *s != '\0')
 	{
 		s++;
 		len++;
