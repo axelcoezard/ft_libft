@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/11/01 11:22:18 by acoezard         ###   ########.fr        #
+#    Updated: 2021/11/05 16:37:59 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -95,4 +95,4 @@ fclean: clean
 
 re:	fclean all
 
-.PHONY: bonus all clean fclean re
+.PHONY: all clean fclean re
