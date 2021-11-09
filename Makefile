@@ -6,7 +6,7 @@
 #    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/11/05 16:37:59 by acoezard         ###   ########.fr        #
+#    Updated: 2021/11/09 10:37:10 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,6 +47,7 @@ FILES 		:=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_list/ft_list_clear.c \
 				ft_list/ft_list_foreach.c \
 				ft_list/ft_list_map.c \
+				ft_list/ft_list_at.c \
 				ft_math/ft_abs.c \
 				ft_math/ft_exp.c \
 				ft_math/ft_max.c \
