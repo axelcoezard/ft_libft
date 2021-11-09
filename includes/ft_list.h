@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/23 16:36:18 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 16:38:52 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/09 10:30:35 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void	ft_list_remove(t_list *lst, void (*del)(void*));
 void	ft_list_clear(t_list **lst, void (*del)(void*));
 void	ft_list_foreach(t_list *lst, void (*f)(void *));
 t_list	*ft_list_map(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_list_at(t_list	*lst, int i);
 
 #endif
