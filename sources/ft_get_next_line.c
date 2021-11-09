@@ -6,13 +6,13 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 16:10:20 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/24 16:14:06 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/02 10:30:02 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-#define BUFFER_SIZE	42
+#define BUFFER_SIZE	1
 
 static char	*gnl_get_line(char *backup)
 {

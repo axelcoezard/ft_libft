@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_add_front.c                                :+:      :+:    :+:   */
+/*   ft_vector_init.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:31:13 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/09 10:34:26 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/29 15:14:04 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/01 11:19:40 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	ft_list_add_front(t_list **alst, void *content)
+t_vector2	*ft_vector2_init(int x, int y)
 {
-	t_list	*new;
+	t_vector2	*vector;
 
-	if (alst != NULL)
-	{
-		new = ft_list_create(content);
-		new->next = *alst;
-		*alst = new;
-	}
+	vector = malloc(sizeof(t_vector2));
+	if (vector == NULL)
+		return (NULL);
+	vector->x = x;
+	vector->y = y;
+	return (vector);
+}
+
+t_vector3	*ft_vector3_init(int x, int y, int z)
+{
+	t_vector3	*vector;
+
+	vector = malloc(sizeof(t_vector3));
+	if (vector == NULL)
+		return (NULL);
+	vector->x = x;
+	vector->y = y;
+	vector->z = z;
+	return (vector);
 }
