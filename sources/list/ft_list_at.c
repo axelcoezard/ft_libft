@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_max.c                                           :+:      :+:    :+:   */
+/*   ft_list_at.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/23 22:16:33 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 22:18:07 by acoezard         ###   ########.fr       */
+/*   Created: 2021/11/09 10:26:23 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 22:44:37 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-double	ft_max(double x, double y)
+t_list	*list_at(t_list	*lst, int i)
 {
-	if (x > y)
-		return (x);
-	return (y);
+	t_list	*current;
+	int		j;
+
+	j = 1;
+	current = lst;
+	while (current != NULL)
+	{
+		if (i == j)
+			return (current);
+		current = current->next;
+		j++;
+	}
+	return (NULL);
 }

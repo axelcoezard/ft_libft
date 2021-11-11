@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_map.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 16:13:55 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 16:52:01 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:45:30 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-t_list	*ft_list_map(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*list_map(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*nlst;
 	t_list	*nelement;

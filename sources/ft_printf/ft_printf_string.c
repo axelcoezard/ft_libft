@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_string.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 12:17:59 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:41:17 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:39:31 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_printf_string(va_list params, t_flags flags)
+int	ft_printf_string(va_list params, char flag)
 {
 	char	*pstr;
 
-	(void) flags;
+	(void) flag;
 	pstr = (char *) va_arg(params, char *);
 	if (pstr != NULL)
 	{

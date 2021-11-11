@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_udecimal.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 13:00:13 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:41:24 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:39:44 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_printf_udecimal(va_list params, t_flags flags)
+int	ft_printf_udecimal(va_list params, char flag)
 {
 	size_t			size;
 	unsigned int	udecimal;
 
-	(void) flags;
+	(void) flag;
 	size = 0;
 	udecimal = (unsigned int) va_arg(params, unsigned int);
 	ft_putunbr_fd(udecimal, 1);

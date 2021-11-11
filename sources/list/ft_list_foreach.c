@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*   ft_list_foreach.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 15:53:50 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/24 15:56:35 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/11 16:11:52 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 22:45:04 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-double	ft_sqrt(double x)
+void	list_foreach(t_list *lst, void (*f)(void *))
 {
-	double	i;
-
-	i = 0;
-	while (i * i < x)
-		i++;
-	if (i * i != x)
-		return (0);
-	return (i);
+	if (lst != NULL)
+	{
+		f(lst->content);
+		ft_list_foreach(lst->next, f);
+	}
 }

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_percent.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 14:09:10 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:41:06 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:38:54 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_printf_percent(va_list params, t_flags flags)
+int	ft_printf_percent(va_list params, char flag)
 {
 	(void) params;
-	(void) flags;
+	(void) flag;
 	ft_putchar_fd('%', 1);
 	return (1);
 }

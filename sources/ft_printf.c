@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 10:54:39 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:37:40 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:42:00 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static int	ft_printf_check(const char flag)
 	return (ft_strchr("cspdiuxX%", flag) != 0);
 }
 
-static int	ft_printf_switch(va_list params, t_flags flags)
+static int	ft_printf_switch(va_list params, const char flag)
 {
-	int	(*ft_printf[128])(va_list, t_flags);
+	int	(*ft_printf[128])(va_list, char);
 
 	ft_printf['c'] = &ft_printf_char;
 	ft_printf['s'] = &ft_printf_string;
@@ -30,13 +30,12 @@ static int	ft_printf_switch(va_list params, t_flags flags)
 	ft_printf['x'] = &ft_printf_hex;
 	ft_printf['X'] = &ft_printf_hex;
 	ft_printf['%'] = &ft_printf_percent;
-	return (ft_printf[(int) flags.type](params, flags));
+	return (ft_printf[(int) flag](params, flag));
 }
 
 int	ft_printf(const char *format, ...)
 {
 	va_list	params;
-	t_flags	flags;
 	int		size;
 
 	size = 0;
@@ -44,10 +43,7 @@ int	ft_printf(const char *format, ...)
 	while (*format)
 	{
 		if (*format == '%' && ft_printf_check(*(format + 1)))
-		{
-			flags.type = *(++format);
-			size += ft_printf_switch(params, flags);
-		}
+			size += ft_printf_switch(params, *(++format));
 		else
 		{
 			ft_putchar_fd(*format, 1);

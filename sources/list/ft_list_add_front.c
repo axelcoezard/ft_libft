@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_at.c                                       :+:      :+:    :+:   */
+/*   ft_list_add_front.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 10:26:23 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/09 10:30:12 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/11 15:31:13 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 22:44:31 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-t_list	*ft_list_at(t_list	*lst, int i)
+void	list_add_front(t_list **alst, void *content)
 {
-	t_list	*current;
-	int		j;
+	t_list	*new;
 
-	j = 1;
-	current = lst;
-	while (current != NULL)
+	if (alst != NULL)
 	{
-		if (i == j)
-			return (current);
-		current = current->next;
-		j++;
+		new = ft_list_create(content);
+		new->next = *alst;
+		*alst = new;
 	}
-	return (NULL);
 }

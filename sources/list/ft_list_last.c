@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pow.c                                           :+:      :+:    :+:   */
+/*   ft_list_last.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/24 15:53:50 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/24 16:01:28 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/11 15:40:10 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 22:45:14 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-double	ft_pow(double x, double power)
+t_list	*list_last(t_list *lst)
 {
-	if (power < 0)
-		return (0);
-	if (power == 0)
-		return (1);
-	return (x * ft_pow(x, power - 1));
+	if (lst == NULL)
+		return (NULL);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }

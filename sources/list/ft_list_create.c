@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_add_back.c                                 :+:      :+:    :+:   */
+/*   ft_list_create.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:43:24 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 16:41:07 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/11 15:17:17 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 22:44:48 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	ft_list_add_back(t_list **alst, void *content)
+t_list	*list_create(void *content)
 {
-	t_list	*last;
-	t_list	*new;
+	t_list	*list;
 
-	if (alst != NULL)
-	{
-		new = ft_list_create(content);
-		if (*alst == NULL)
-			*alst = new;
-		else
-		{
-			last = ft_list_last(*alst);
-			last->next = new;
-		}
-	}
+	list = (t_list *) malloc(sizeof(t_list));
+	if (!list)
+		return (NULL);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

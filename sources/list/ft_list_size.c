@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_vector_div.c                                    :+:      :+:    :+:   */
+/*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/29 15:50:29 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/01 11:16:00 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/11 15:33:49 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 22:45:42 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-t_vector2	*ft_vector2_div(t_vector2 *a, int x)
+int	list_size(t_list *lst)
 {
-	if (a == NULL)
-		return (NULL);
-	a->x /= x;
-	a->y /= x;
-	return (a);
-}
+	int		size;
 
-t_vector3	*ft_vector3_div(t_vector3 *a, int x)
-{
-	if (a == NULL)
-		return (NULL);
-	a->x /= x;
-	a->y /= x;
-	a->z /= x;
-	return (a);
+	size = 0;
+	while (lst != NULL)
+	{
+		lst = lst->next;
+		size++;
+	}
+	return (size);
 }

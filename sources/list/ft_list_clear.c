@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_remove.c                                   :+:      :+:    :+:   */
+/*   ft_list_clear.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 16:03:44 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 16:52:01 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/11 15:54:21 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 22:44:43 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	ft_list_remove(t_list *lst, void (*del)(void*))
+void	list_clear(t_list **lst, void (*del)(void*))
 {
-	if (lst != NULL)
+	t_list	*current;
+	t_list	*tmp;
+
+	if (lst != NULL && del != NULL)
 	{
-		del(lst->content);
-		free(lst);
+		current = *lst;
+		while (current != NULL)
+		{
+			tmp = current->next;
+			ft_list_remove(current, del);
+			current = tmp;
+		}
+		*lst = NULL;
 	}
 }

@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_ptr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 14:09:10 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:41:12 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:39:10 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_printf_ptr(va_list params, t_flags flags)
+int	ft_printf_ptr(va_list params, char flag)
 {
 	unsigned long	address;
 	void			*ptr;
 	int				size;
 
-	(void) flags;
+	(void) flag;
 	ptr = (void *) va_arg(params, void *);
 	address = (unsigned long) ptr;
 	ft_putstr_fd("0x", 1);

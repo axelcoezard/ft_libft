@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_decimal.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 13:53:56 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:40:44 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:37:44 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_printf_decimal(va_list params, t_flags flags)
+int	ft_printf_decimal(va_list params, char flag)
 {
 	size_t	size;
 	int		decimal;
 
-	(void) flags;
+	(void) flag;
 	size = 0;
 	decimal = (int) va_arg(params, int);
 	ft_putnbr_fd(decimal, 1);

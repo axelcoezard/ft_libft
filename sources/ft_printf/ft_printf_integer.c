@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_integer.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 12:18:40 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/27 16:41:01 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/11 22:38:41 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	ft_printf_integer(va_list params, t_flags flags)
+int	ft_printf_integer(va_list params, char flag)
 {
 	size_t	size;
 	int		i;
 
-	(void) flags;
+	(void) flag;
 	size = 0;
 	i = (int) va_arg(params, int);
 	ft_putnbr_fd(i, 1);
