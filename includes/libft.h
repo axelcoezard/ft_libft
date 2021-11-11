@@ -6,7 +6,7 @@
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 23:48:28 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/11 23:52:17 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int		ft_printf_udecimal(va_list params, char flag);
 int		ft_printf_hex(va_list params, char flag);
 int		ft_printf_percent(va_list params, char flag);
 
-char	*ft_get_next_line(int fd);
+char	*get_next_line(int fd);
 
 /* ************************ CHARACTERS ************************ */
 int		ft_isalnum(int c);
