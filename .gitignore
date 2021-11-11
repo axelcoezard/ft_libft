@@ -4,6 +4,6 @@
 *.swo
 *.DS_Store
 
-bin/
+libftTester/
 
 libft.a
