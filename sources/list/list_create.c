@@ -1,24 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_last.c                                     :+:      :+:    :+:   */
+/*   list_create.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:40:10 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 22:45:14 by axelcoezard      ###   ########.fr       */
+/*   Created: 2021/10/11 15:17:17 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 23:34:25 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-t_list	*list_last(t_list *lst)
+t_list	*list_create(void)
 {
-	if (lst == NULL)
+	t_list	*list;
+
+	list = (t_list *) malloc(sizeof(t_list));
+	if (list == NULL)
 		return (NULL);
-	while (lst->next != NULL)
-	{
-		lst = lst->next;
-	}
-	return (lst);
+	list->first = NULL;
+	list->last = NULL;
+	list->size = 0;
+	return (list);
 }

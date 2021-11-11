@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_size.c                                     :+:      :+:    :+:   */
+/*   list_create_node.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:33:49 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 22:45:42 by axelcoezard      ###   ########.fr       */
+/*   Created: 2021/11/11 23:26:51 by axelcoezard       #+#    #+#             */
+/*   Updated: 2021/11/11 23:34:17 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int	list_size(t_list *lst)
+t_node	*list_create_node(void *content)
 {
-	int		size;
+	t_node	*node;
 
-	size = 0;
-	while (lst != NULL)
-	{
-		lst = lst->next;
-		size++;
-	}
-	return (size);
+	node = (t_node *) malloc(sizeof(t_node));
+	if (node == NULL)
+		return (NULL);
+	node->content = content;
+	node->prev = NULL;
+	node->next = NULL;
+	return (node);
 }

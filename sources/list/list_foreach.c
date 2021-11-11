@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_add_back.c                                 :+:      :+:    :+:   */
+/*   list_foreach.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:43:24 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 22:44:23 by axelcoezard      ###   ########.fr       */
+/*   Created: 2021/10/11 16:11:52 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 23:41:50 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	list_add_back(t_list **alst, void *content)
+void	list_foreach(t_list *list, void (*callback)(void *))
 {
-	t_list	*last;
-	t_list	*new;
+	t_node *node;
 
-	if (alst != NULL)
+	if (list != NULL)
 	{
-		new = ft_list_create(content);
-		if (*alst == NULL)
-			*alst = new;
-		else
+		node = list->first;
+		while (node != NULL)
 		{
-			last = ft_list_last(*alst);
-			last->next = new;
+			callback(node->content);
+			node = node->next;
 		}
 	}
 }

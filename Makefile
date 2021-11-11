@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+         #
+#    By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/11/09 10:37:10 by acoezard         ###   ########.fr        #
+#    Updated: 2021/11/11 23:22:41 by axelcoezard      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,30 +38,16 @@ FILES 		:=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_printf/ft_printf_ptr.c \
 				ft_printf/ft_printf_string.c \
 				ft_printf/ft_printf_udecimal.c \
-				ft_list/ft_list_create.c \
-				ft_list/ft_list_add_front.c \
-				ft_list/ft_list_add_back.c \
-				ft_list/ft_list_size.c \
-				ft_list/ft_list_last.c \
-				ft_list/ft_list_remove.c \
-				ft_list/ft_list_clear.c \
-				ft_list/ft_list_foreach.c \
-				ft_list/ft_list_map.c \
-				ft_list/ft_list_at.c \
-				ft_math/ft_abs.c \
-				ft_math/ft_exp.c \
-				ft_math/ft_max.c \
-				ft_math/ft_min.c \
-				ft_math/ft_pow.c \
-				ft_math/ft_sqrt.c \
-				ft_vector/ft_vector_init.c \
-				ft_vector/ft_vector_add.c \
-				ft_vector/ft_vector_sub.c \
-				ft_vector/ft_vector_mul.c \
-				ft_vector/ft_vector_div.c \
-				ft_vector/ft_vector_mod.c \
-				ft_vector/ft_vector_dot.c \
-				ft_vector/ft_vector_distance.c
+				list/list_create.c \
+				list/list_add_front.c \
+				list/list_add_back.c \
+				list/list_size.c \
+				list/list_last.c \
+				list/list_remove.c \
+				list/list_clear.c \
+				list/list_foreach.c \
+				list/list_map.c \
+				list/list_at.c \
 
 SRCS		:=	$(addprefix ${SOURCES}/, ${FILES})
 OBJS		:=	$(addprefix ${OBJECTS}/, $(FILES:.c=.o))

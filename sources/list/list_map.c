@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_clear.c                                    :+:      :+:    :+:   */
+/*   list_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:54:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 22:44:43 by axelcoezard      ###   ########.fr       */
+/*   Created: 2021/10/11 16:13:55 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 23:46:42 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	list_clear(t_list **lst, void (*del)(void*))
+t_list	*list_map(t_list *list, void *(*callback)(void *), void (*del)(void *))
 {
-	t_list	*current;
-	t_list	*tmp;
+	t_node	*current;
+	t_list	*nlist;
+	void	*nelement;
 
-	if (lst != NULL && del != NULL)
+	if (list == NULL || callback == NULL || del == NULL)
+		return (NULL);
+	nlist = list_create();
+	current = list->first;
+	while (current != NULL)
 	{
-		current = *lst;
-		while (current != NULL)
-		{
-			tmp = current->next;
-			ft_list_remove(current, del);
-			current = tmp;
-		}
-		*lst = NULL;
+		list_add_back(nlist, f(current->content));
+		current = current->next;
 	}
+	return (nlist);
 }

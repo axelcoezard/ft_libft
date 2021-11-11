@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list_add_front.c                                :+:      :+:    :+:   */
+/*   list_add_back.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 15:31:13 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 22:44:31 by axelcoezard      ###   ########.fr       */
+/*   Created: 2021/10/11 15:43:24 by acoezard          #+#    #+#             */
+/*   Updated: 2021/11/11 23:33:53 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	list_add_front(t_list **alst, void *content)
+void	list_add_back(t_list *list, void *content)
 {
-	t_list	*new;
+	t_node	*node;
 
-	if (alst != NULL)
+	if (list != NULL)
 	{
-		new = ft_list_create(content);
-		new->next = *alst;
-		*alst = new;
+		node = list_create_node(content);
+		node->prev = list->last;
+		list->last = node;
+		list->size++;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 22:37:02 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/11 23:48:28 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,19 @@
 # include <sys/stat.h>
 
 /* ************************ STRUCTURES ************************ */
-struct s_list
+typedef struct s_node
 {
 	void			*content;
-	struct s_list	*prev;
-	struct s_list	*next;
-};
-typedef struct s_list	t_list;
+	struct s_node	*prev;
+	struct s_node	*next;
+}	t_node;
+
+typedef struct s_list
+{
+	struct s_node	*first;
+	struct s_node	*last;
+	unsigned int	size;
+}	t_list;
 
 /* ********************** INPUT / OUTPUT ********************** */
 void	ft_putchar_fd(char c, int fd);
@@ -96,16 +102,14 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
 /* *********************** LINKED LISTS *********************** */
-t_list	*list_create(void *content);
-void	list_add_front(t_list **head, void *content);
-void	list_add_back(t_list **head, void *content);
-int		list_size(t_list *list);
-t_list	*list_first(t_list *list);
-t_list	*list_last(t_list *list);
-void	list_remove(t_list *list, void (*del)(void*));
-void	list_clear(t_list **list, void (*del)(void*));
-void	list_foreach(t_list *list, void (*f)(void *));
-t_list	*list_map(t_list *list, void *(*f)(void *), void (*del)(void *));
-t_list	*list_at(t_list	*list, int i);
+t_list	*list_create(void);
+t_node	*list_create_node(void *content);
+void	list_add_front(t_list *list, void *content);
+void	list_add_back(t_list *list, void *content);
+void	list_foreach(t_list *list, void (*callback)(void *));
+t_list	*list_map(t_list *list, void *(*callback)(void *), void (*del)(void *));
+void	list_clear(t_list *list, void (*del)(void*));
+void	list_remove(t_node *node, void (*del)(void*));
+
 
 #endif
