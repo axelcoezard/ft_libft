@@ -6,7 +6,7 @@
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/12 22:22:52 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/12 22:24:22 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,6 @@ typedef struct s_list
 	struct s_node	*last;
 	unsigned int	size;
 }	t_list;
-
-typedef struct s_string
-{
-	char			*value;
-	unsigned int	size;
-}	t_string;
 
 /* ************************ CHARACTERS ************************ */
 int			ft_isalnum(int c);
