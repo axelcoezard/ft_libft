@@ -6,7 +6,7 @@
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/12 21:19:49 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/12 22:22:52 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,12 +92,6 @@ char		*ft_strjoin(const char *s1, const char *s2);
 char		*ft_strtrim(const char *s1, const char *set);
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 char		**ft_split(const char *s, char c);
-
-t_string	string_create(char *value);
-t_string	string_clone(const t_string src);
-t_string	string_trim(const t_string src, const char *charset);
-t_string	*string_split(const t_string src, const char *charset);
-void		string_clear(t_string src);
 
 /* ************************** INTEGERS ************************ */
 char		*ft_itoa(int n);

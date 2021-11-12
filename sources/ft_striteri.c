@@ -3,18 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 14:58:56 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/18 12:34:23 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/12 22:11:09 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/libft.h"
+
 /**
- * Applique la fonction f à chaque caractère de la 
- * chaîne de caractères transmise comme argument, et 
- * en passant son index comme premier argument. Chaque 
- * caractère est transmis par adresse à f pour être 
+ * Applique la fonction f à chaque caractère de la
+ * chaîne de caractères transmise comme argument, et
+ * en passant son index comme premier argument. Chaque
+ * caractère est transmis par adresse à f pour être
  * modifié si nécessaire.
  *
  * \param	s	La chaine de caractères sur laquelle itérer.
