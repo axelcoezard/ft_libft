@@ -6,7 +6,7 @@
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/12 00:20:18 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/12 21:19:49 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,18 @@ typedef struct s_string
 	unsigned int	size;
 }	t_string;
 
+/* ************************ CHARACTERS ************************ */
+int			ft_isalnum(int c);
+int			ft_isalpha(int c);
+int			ft_isdigit(int c);
+int			ft_isascii(int c);
+int			ft_isprint(int c);
+int			ft_islower(int c);
+int			ft_isupper(int c);
+int			ft_isspace(int c);
+int			ft_toupper(int c);
+int			ft_tolower(int c);
+
 /* ********************** INPUT / OUTPUT ********************** */
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
@@ -61,18 +73,6 @@ int			ft_printf_hex(va_list params, char flag);
 int			ft_printf_percent(va_list params, char flag);
 
 char		*get_next_line(int fd);
-
-/* ************************ CHARACTERS ************************ */
-int			ft_isalnum(int c);
-int			ft_isalpha(int c);
-int			ft_isdigit(int c);
-int			ft_isascii(int c);
-int			ft_isprint(int c);
-int			ft_islower(int c);
-int			ft_isupper(int c);
-int			ft_isspace(int c);
-int			ft_toupper(int c);
-int			ft_tolower(int c);
 
 /* ************************** STRINGS ************************* */
 size_t		ft_strlen(const char *s);
@@ -118,9 +118,7 @@ t_list		*list_create(void);
 t_node		*list_create_node(void *content);
 void		list_add_front(t_list *list, void *content);
 void		list_add_back(t_list *list, void *content);
-void		list_foreach(t_list *list, void (*callback)(void *));
-t_list		*list_map(t_list *list, void *(*callback)(void *), void (*del)(void *));
-void		list_clear(t_list *list, void (*del)(void*));
 void		list_remove(t_node *node, void (*del)(void*));
+void		list_clear(t_list *list, void (*del)(void*));
 
 #endif

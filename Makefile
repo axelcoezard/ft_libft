@@ -6,7 +6,7 @@
 #    By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/11/12 18:44:28 by axelcoezard      ###   ########.fr        #
+#    Updated: 2021/11/12 21:19:00 by axelcoezard      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,9 +43,7 @@ FILES 		:=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				list/list_add_front.c \
 				list/list_add_back.c \
 				list/list_remove.c \
-				list/list_clear.c \
-				list/list_foreach.c \
-				list/list_map.c \
+				list/list_clear.c
 
 SRCS		:=	$(addprefix ${SOURCES}/, ${FILES})
 OBJS		:=	$(addprefix ${OBJECTS}/, $(FILES:.c=.o))
