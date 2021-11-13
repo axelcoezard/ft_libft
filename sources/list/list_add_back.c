@@ -6,7 +6,7 @@
 /*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:43:24 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 23:33:53 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/13 00:42:56 by axelcoezard      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,20 @@
 
 void	list_add_back(t_list *list, void *content)
 {
+	t_node	*head;
 	t_node	*node;
 
-	if (list != NULL)
+	node = list_create_node(content);
+	head = list->first;
+	if (head == NULL)
+		list->first = node;
+	else
 	{
-		node = list_create_node(content);
-		node->prev = list->last;
+		if (list->last == NULL)
+			list->last = head;
+		list->last->next = node;
 		list->last = node;
+		node->prev = list->last;
 		list->size++;
 	}
 }
