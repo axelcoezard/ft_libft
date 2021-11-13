@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_add_back.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:43:24 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/13 00:42:56 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/13 20:41:01 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ void	list_add_back(t_list *list, void *content)
 		list->last->next = node;
 		list->last = node;
 		node->prev = list->last;
-		list->size++;
 	}
+	list->size++;
 }

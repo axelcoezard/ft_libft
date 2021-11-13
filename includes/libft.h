@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/12 22:24:22 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/13 20:23:09 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ t_list		*list_create(void);
 t_node		*list_create_node(void *content);
 void		list_add_front(t_list *list, void *content);
 void		list_add_back(t_list *list, void *content);
-void		list_remove(t_node *node, void (*del)(void*));
+void		list_remove(t_list *list, t_node *node, void (*del)(void*));
 void		list_clear(t_list *list, void (*del)(void*));
 
 #endif

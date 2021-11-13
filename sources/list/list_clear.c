@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   list_clear.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:54:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/11 23:36:49 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/11/13 20:23:36 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	list_clear(t_list *list, void (*del)(void*))
 		while (current != NULL)
 		{
 			tmp = current->next;
-			list_remove(current, del);
+			list_remove(list, current, del);
 			current = tmp;
 		}
 		free(list);
