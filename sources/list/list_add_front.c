@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/11 15:31:13 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/13 20:40:54 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/11/14 20:56:53 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	list_add_front(t_list *list, void *content)
 {
-	t_node  *head;
+	t_node	*head;
 	t_node	*last;
 	t_node	*node;
 
