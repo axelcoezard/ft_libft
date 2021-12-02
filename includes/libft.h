@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/13 20:23:09 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/02 19:06:13 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/* ************************* INCLUDES ************************* */
+/* ************************ INCLUDES ************************** */
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdarg.h>
 # include <fcntl.h>
 # include <sys/types.h>
 # include <sys/stat.h>
+
+/* ************************* DEFINES ************************** */
 
 /* ************************ STRUCTURES ************************ */
 typedef struct s_node
@@ -55,16 +56,6 @@ void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_putunbr_fd(unsigned int nbr, int fd);
 void		ft_putunbr_base_fd(unsigned long nbr, char *base, int fd);
-
-int			ft_printf(const char *format, ...);
-int			ft_printf_char(va_list params, char flag);
-int			ft_printf_string(va_list params, char flag);
-int			ft_printf_ptr(va_list params, char flag);
-int			ft_printf_decimal(va_list params, char flag);
-int			ft_printf_integer(va_list params, char flag);
-int			ft_printf_udecimal(va_list params, char flag);
-int			ft_printf_hex(va_list params, char flag);
-int			ft_printf_percent(va_list params, char flag);
 
 char		*get_next_line(int fd);
 
