@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 16:10:20 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/03 17:51:34 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/03 18:13:08 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 char	*get_next_line(int fd)
 {
 	char	*line;
+	char	*tmp;
 	char	byte[2];
-	int 	reader;
 
+	if (fd <= 0)
+		return (NULL);
 	line = str_dup("");
-	while (*byte != '\n' && reader != 0)
+	while (*byte != '\n' && read(fd, byte, 1) != 0)
 	{
-		reader = read(fd, byte, 1);
 		byte[1] = 0;
-		line = str_join(line, byte);
+		tmp = str_join(line, byte);
+		free(line);
+		line = tmp;
 	}
 	if (line[0] == '\0')
 	{
@@ -32,16 +35,3 @@ char	*get_next_line(int fd)
 	}
 	return (line);
 }
-
-/*
-int	main(void)
-{
-	char *line;
-	int fd;
-
-	fd = open("../Makefile", O_RDONLY);
-	while ((line = get_next_line(fd)) != NULL)
-		ft_putstr_fd(line, 1);
-	close(fd);
-}
-*/
