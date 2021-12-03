@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+         #
+#    By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/05 11:42:41 by acoezard          #+#    #+#              #
-#    Updated: 2021/11/12 21:19:00 by axelcoezard      ###   ########.fr        #
+#    Updated: 2021/12/03 17:53:58 by acoezard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,21 +23,23 @@ FILES 		:=	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 				ft_putstr_fd.c ft_putunbr_fd.c ft_putunbr_base_fd.c \
 				ft_bzero.c ft_calloc.c ft_memccpy.c ft_memchr.c \
 				ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c  \
-				ft_itoa.c ft_atoi.c ft_split.c \
-				ft_strcat.c ft_strchr.c ft_strcpy.c ft_strdup.c \
-				ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c \
-				ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c \
-				ft_strtrim.c ft_substr.c ft_striteri.c \
-				get_next_line.c \
-				ft_printf.c \
-				ft_printf/ft_printf_char.c \
-				ft_printf/ft_printf_decimal.c \
-				ft_printf/ft_printf_hex.c \
-				ft_printf/ft_printf_integer.c \
-				ft_printf/ft_printf_percent.c \
-				ft_printf/ft_printf_ptr.c \
-				ft_printf/ft_printf_string.c \
-				ft_printf/ft_printf_udecimal.c \
+				ft_itoa.c ft_atoi.c ft_substr.c get_next_line.c \
+				str/str_split.c \
+				str/str_cat.c \
+				str/str_chr.c \
+				str/str_cpy.c \
+				str/str_dup.c \
+				str/str_join.c \
+				str/str_lcat.c \
+				str/str_lcpy.c \
+				str/str_len.c \
+				str/str_mapi.c \
+				str/str_cmp.c \
+				str/str_ncmp.c \
+				str/str_nstr.c \
+				str/str_rchr.c \
+				str/str_trim.c \
+				str/str_iteri.c \
 				list/list_create.c \
 				list/list_create_node.c \
 				list/list_add_front.c \
@@ -49,6 +51,7 @@ SRCS		:=	$(addprefix ${SOURCES}/, ${FILES})
 OBJS		:=	$(addprefix ${OBJECTS}/, $(FILES:.c=.o))
 
 CC			:=	gcc
+CINCLUDES	:=	-I${INCLUDES}
 CFLAGS		:=	-Wall -Wextra -Werror
 
 BLACK		:=	"\033[1;30m"
@@ -62,7 +65,7 @@ EOC			:=	"\033[0;0m"
 ${OBJECTS}/%.o : ${SOURCES}/%.c
 	@echo "● Compilation de "$(BLUE)"${notdir $<}"$(EOC)"."
 	@mkdir -p $(dir $@)
-	@${CC} ${CFLAGS} -c $^ -o $@
+	@${CC} ${CFLAGS} ${CINCLUDES} -c $^ -o $@
 
 all: ${NAME}
 

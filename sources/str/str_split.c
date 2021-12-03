@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   str_split.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 17:22:47 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:18:37 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:55:44 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-static int	ft_split_sep(char c, char sep)
+static int	str_split_sep(char c, char sep)
 {
 	return (c == sep || c == '\0');
 }
 
-static int	ft_split_search(const char *s, char c)
+static int	str_split_search(const char *s, char c)
 {
 	int		j;
 
 	j = 0;
-	while (!ft_split_sep(s[j], c))
+	while (!str_split_sep(s[j], c))
 		j++;
 	return (j);
 }
 
-static int	ft_split_size(const char *s, char c)
+static int	str_split_size(const char *s, char c)
 {
 	int		size;
 	int		i;
@@ -36,7 +36,7 @@ static int	ft_split_size(const char *s, char c)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if (!ft_split_sep(s[i], c) && ft_split_sep(s[i + 1], c))
+		if (!str_split_sep(s[i], c) && str_split_sep(s[i + 1], c))
 		{
 			size++;
 		}
@@ -45,7 +45,7 @@ static int	ft_split_size(const char *s, char c)
 	return (size);
 }
 
-static char	*ft_split_copy(const char *s, int start, int size)
+static char	*str_split_copy(const char *s, int start, int size)
 {
 	char	*word;
 	int		i;
@@ -69,7 +69,7 @@ static char	*ft_split_copy(const char *s, int start, int size)
  * \param	c	Le caractère délimitant.
  * \return		Le tableau des chaines de caractères résultant du découpage.
  */
-char	**ft_split(const char *s, char c)
+char	**str_split(const char *s, char c)
 {
 	char	**words;
 	int		size;
@@ -77,7 +77,7 @@ char	**ft_split(const char *s, char c)
 	int		j;
 	int		k;
 
-	size = ft_split_size(s, c);
+	size = str_split_size(s, c);
 	words = (char **) malloc(sizeof(char *) * (size + 1));
 	if (!words)
 		return (NULL);
@@ -89,8 +89,8 @@ char	**ft_split(const char *s, char c)
 			i++;
 		else
 		{
-			j = ft_split_search(s + i, c);
-			words[k++] = ft_split_copy(s, i, j);
+			j = str_split_search(s + i, c);
+			words[k++] = str_split_copy(s, i, j);
 			i += j;
 		}
 	}

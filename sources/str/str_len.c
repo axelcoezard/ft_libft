@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   str_len.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 13:39:21 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:18:37 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/06 16:29:31 by acoezard          #+#    #+#             */
+/*   Updated: 2021/12/03 17:55:11 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-char	*ft_strdup(const char *s)
+size_t	str_len(const char *s)
 {
-	char	*dest;
-	int		dest_len;
+	size_t	len;
 
-	dest_len = ft_strlen(s) + 1;
-	dest = (char *) ft_calloc(dest_len, 1);
-	if (!dest)
-		return (NULL);
-	return (ft_strcpy(dest, s));
+	len = 0;
+	while (s && s[len] != '\0')
+		len++;
+	return (len);
 }

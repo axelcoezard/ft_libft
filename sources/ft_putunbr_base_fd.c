@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putunbr_base_fd.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/19 14:32:47 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:35:13 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:50:48 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static void	ft_putunbr_recursive(unsigned long nbr, char *base, int fd)
 {
 	int		base_size;
 
-	base_size = ft_strlen(base);
+	base_size = str_len(base);
 	if (nbr > 0)
 	{
 		ft_putunbr_recursive(nbr / base_size, base, fd);

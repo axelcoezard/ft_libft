@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 16:16:06 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/02 19:06:13 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:50:12 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,23 +60,23 @@ void		ft_putunbr_base_fd(unsigned long nbr, char *base, int fd);
 char		*get_next_line(int fd);
 
 /* ************************** STRINGS ************************* */
-size_t		ft_strlen(const char *s);
-char		*ft_strcpy(char *dest, const char *src);
-size_t		ft_strlcpy(char *dest, const char *src, size_t size);
-char		*ft_strcat(char *dest, const char *src);
-size_t		ft_strlcat(char *dest, const char *src, size_t size);
-char		*ft_strchr(const char *s, int c);
-char		*ft_strrchr(const char *s, int c);
-int			ft_strcmp(const char *s1, const char *s2);
-int			ft_strncmp(const char *s1, const char *s2, size_t n);
-char		*ft_strnstr(const char *str, const char *to_find, size_t len);
-char		*ft_strdup(const char *s);
+size_t		str_len(const char *s);
+char		*str_cpy(char *dest, const char *src);
+size_t		str_lcpy(char *dest, const char *src, size_t size);
+char		*str_cat(char *dest, const char *src);
+size_t		str_lcat(char *dest, const char *src, size_t size);
+char		*str_chr(const char *s, int c);
+char		*str_rchr(const char *s, int c);
+int			str_cmp(const char *s1, const char *s2);
+int			str_ncmp(const char *s1, const char *s2, size_t n);
+char		*str_nstr(const char *str, const char *to_find, size_t len);
+char		*str_dup(const char *s);
+char		*str_mapi(const char *s, char (*f)(unsigned int, char));
+char		*str_join(const char *s1, const char *s2);
+char		*str_trim(const char *s1, const char *set);
+void		str_iteri(char *s, void (*f)(unsigned int, char *));
+char		**str_split(const char *s, char c);
 char		*ft_substr(const char *s, unsigned int start, size_t len);
-char		*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-char		*ft_strjoin(const char *s1, const char *s2);
-char		*ft_strtrim(const char *s1, const char *set);
-void		ft_striteri(char *s, void (*f)(unsigned int, char *));
-char		**ft_split(const char *s, char c);
 
 /* ************************** INTEGERS ************************ */
 char		*ft_itoa(int n);

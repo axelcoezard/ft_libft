@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   str_rchr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 16:52:25 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:18:37 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/06 17:02:29 by acoezard          #+#    #+#             */
+/*   Updated: 2021/12/03 17:55:35 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*str_rchr(const char *s, int c)
 {
 	char	*str;
 	int		i;
 
 	str = (char *) s;
-	i = 0;
+	i = str_len(s);
 	while (str[i] != (unsigned char) c)
 	{
-		if (str[i] == '\0')
+		if (i == 0)
 			return (NULL);
-		i++;
+		i--;
 	}
 	return (str + i);
 }

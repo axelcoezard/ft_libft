@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   str_mapi.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/10 17:46:34 by acoezard          #+#    #+#             */
-/*   Updated: 2021/10/23 17:18:37 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:55:19 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 /**
  * Applique la fonction ’f’ à chaque caractère de la chaine de
@@ -21,14 +21,14 @@
  * \param	f	La fonction à appliquer à chaque caractère.
  * \return		La chaine de caractères résultant des applications de f.
  */
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
+char	*str_mapi(const char *s, char (*f)(unsigned int, char))
 {
 	char	*sptr;
 	size_t	i;
 
 	if (!s || !f)
 		return (NULL);
-	sptr = (char *) ft_calloc(ft_strlen(s) + 1, 1);
+	sptr = (char *) ft_calloc(str_len(s) + 1, 1);
 	if (!sptr)
 		return (NULL);
 	i = 0;

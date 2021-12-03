@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   str_iteri.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: axelcoezard <axelcoezard@student.42.fr>    +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/14 14:58:56 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/12 22:11:09 by axelcoezard      ###   ########.fr       */
+/*   Updated: 2021/12/03 17:54:35 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
 /**
  * Applique la fonction f à chaque caractère de la
@@ -22,7 +22,7 @@
  * \param	s	La chaine de caractères sur laquelle itérer.
  * \param	f	La fonction à appliquer à chaque caractère.
  */
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	str_iteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 

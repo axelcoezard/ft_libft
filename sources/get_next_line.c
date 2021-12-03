@@ -6,7 +6,7 @@
 /*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/24 16:10:20 by acoezard          #+#    #+#             */
-/*   Updated: 2021/12/03 16:22:33 by acoezard         ###   ########.fr       */
+/*   Updated: 2021/12/03 17:51:34 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ char	*get_next_line(int fd)
 	char	byte[2];
 	int 	reader;
 
-	line = ft_strdup("");
+	line = str_dup("");
 	while (*byte != '\n' && reader != 0)
 	{
 		reader = read(fd, byte, 1);
 		byte[1] = 0;
-		line = ft_strjoin(line, byte);
+		line = str_join(line, byte);
 	}
 	if (line[0] == '\0')
 	{
@@ -33,6 +33,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
+/*
 int	main(void)
 {
 	char *line;
@@ -43,3 +44,4 @@ int	main(void)
 		ft_putstr_fd(line, 1);
 	close(fd);
 }
+*/

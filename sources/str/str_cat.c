@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   str_cat.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acoezard <acoezard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: acoezard <acoezard@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 16:29:31 by acoezard          #+#    #+#             */
-/*   Updated: 2021/11/02 10:19:09 by acoezard         ###   ########.fr       */
+/*   Created: 2021/10/10 17:32:28 by acoezard          #+#    #+#             */
+/*   Updated: 2021/12/03 17:51:48 by acoezard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-size_t	ft_strlen(const char *s)
+char	*str_cat(char *dest, const char *src)
 {
-	size_t	len;
+	size_t	i;
+	size_t	j;
 
-	len = 0;
-	while (s && *s != '\0')
+	i = str_len(dest);
+	j = 0;
+	while (src[j] != 0)
 	{
-		s++;
-		len++;
+		dest[i + j] = src[j];
+		j++;
 	}
-	return (len);
+	dest[i + j] = 0;
+	return (dest);
 }
